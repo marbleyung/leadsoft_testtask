@@ -1,0 +1,6 @@
+node_modules
+.gitignore
+docker-compose.yml
+.dockerignore
+node_modules/
+venv/

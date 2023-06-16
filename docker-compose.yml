@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  backend:
+    build: ./leadsoft_backend
+    command: uvicorn main:app --host 0.0.0.0 --reload
+    volumes:
+      - ./leadsoft_backend:/backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./leadsoft_backend/.env
+    networks:
+      - supernet
+    hostname: backend
+
+  frontend:
+    build: ./leadsoft_frontend_site
+    command: sh -c "cd static/js && node server.js"
+    volumes:
+      - ./leadsoft_frontend_site:/frontend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+    networks:
+      - supernet
+
+  admin:
+    build: ./leadsoft-admin-site
+    command: npm run dev
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+      - frontend
+      - nginx
+    networks:
+      - supernet
+
+  nginx:
+    image: nginx:1.25.0-alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+    volumes:
+      - ./leadsoft_frontend_site/static:/frontend/static/
+      - ./nginx-conf.d:/etc/nginx/conf.d
+    networks:
+      - supernet
+
+volumes:
+  static:
+
+networks:
+  supernet:
+    driver: bridge
+    external: true

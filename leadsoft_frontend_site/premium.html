@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Premium</title>
+</head>
+
+
+<body>
+    <div class="wrapper">
+        <div class="main-plus-header">
+
+            <header class="header">
+                <div class="container">
+                    <ul class="nav-menu">
+                        <div class="menu-logo">
+                            <li class="nav-li">
+                                <a href="index.html" class="nav-link">
+                                    <svg width="100" height="100">
+                                        <linearGradient id="linearColors" x1="0" y1="0" x2="1" y2="1">
+                                            <stop offset="0%" stop-color="#001100"></stop>
+                                            <stop offset="20%" stop-color="#FFAAFF"></stop>
+                                            <stop offset="40%" stop-color="#AADD99"></stop>
+                                            <stop offset="60%" stop-color="#CAD953"></stop>
+                                            <stop offset="80%" stop-color="#FFAAFF"></stop>
+                                            <stop offset="100%" stop-color="#110011"></stop>
+                                        </linearGradient>
+                                        <circle r="40" cx="50" cy="50" class="external-circle" stroke-width="4"
+                                            fill="none" stroke="url(#linearColors)"></circle>
+                                    </svg>
+                                </a>
+                            </li>
+                        </div>
+                        <div class="menu-points">
+                            <li class="nav-li">
+                                <a href="premium.html" class="nav-link">Premium</a>
+                            </li>
+                            <li class="nav-li">
+                                <a href="ultra.html" class="nav-link">Ultra</a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </header>
+        </div>
+
+        <main class="main">
+            <div class="main-container">
+                <ul class="main-list">
+                    <button type="submit" class="main-title main-title1" value="#FFBDF7" data-headerValue="#FF78C4"
+                        data-fontValue="#FFECEC" data-footerValue="#693D3D">
+                        Call 1-800-505-SPRING and get a new ALL-#FFBDF7 style!</button>
+                    <button type="submit" class="main-title main-title2" value="#73BBC9" data-headerValue="#FCE9F1"
+                        data-fontValue="#080202" data-footerValue="#F1D4E5">
+                        Call 1-800-505-WEDDING and get a new ALL-#73BBC9 style!</button>
+                    <button type="submit" class="main-title main-title3" value="#AEE2FF" data-headerValue="#B799FF"
+                        data-fontValue="#E6FFFD" data-footerValue="#ACBCFF">
+                        Call 1-800-505-WINTER-FAIRY and get a new ALL-#AEE2FF style!</button>
+                    <button type="submit" class="main-title main-title4" value="#C85C8E" data-headerValue="#7B2869"
+                        data-fontValue="#FFBABA" data-footerValue="#9D3C72">
+                        Call 1-800-505-SUNSET and get a new ALL-#C85C8E style!</button>
+                    <button type="submit" class="main-title main-title5" value="#E5E5CB" data-headerValue="#1A120B"
+                        data-fontValue="#D5CEA3" data-footerValue="#3C2A21">
+                        Call 1-800-505-NIGHT and get a new ALL-#E5E5CB style!</button>
+                </ul>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <nav class="footer-menu">
+                    <ul class="footer-menu-list">
+                        <li class="footer-menu-item">
+                            <p class="footer-menu-title">Title of Block 1</p>
+                        </li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 1 Link 1</a></li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 1 Link 2</a></li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 1 Link 3</a></li>
+                    </ul>
+
+                    <ul class="footer-menu-list">
+                        <li class="footer-menu-item">
+                            <p class="footer-menu-title">Title of Block 2</p>
+                        </li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 2 Link 1</a></li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 2 Link 2</a></li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 2 Link 3</a></li>
+                    </ul>
+
+                    <ul class="footer-menu-list">
+                        <li class="footer-menu-item">
+                            <p class="footer-menu-title">Title of Block 3</p>
+                        </li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 3 Link 1</a></li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 3 Link 2</a></li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 3 Link 3</a></li>
+                    </ul>
+
+                    <ul class="footer-menu-list">
+                        <li class="footer-menu-item">
+                            <p class="footer-menu-title">Title of Block 4</p>
+                        </li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 4 Link 1</a></li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 4 Link 2</a></li>
+                        <li class="footer-menu-item"><a href="" class="footer-menu-link">Block 4 Link 3</a></li>
+                    </ul>
+                </nav>
+
+                <ul class="app-links">
+                    <li class="app-item">
+                        <a href="#" class="app-item-link">
+                            <img class="app-item-img" src="static/img/appstore.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="app-item">
+                        <a href="#" class="app-item-link">
+                            <img class="app-item-img" src="static/img/googleplay.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer-copy">
+                    <p class="footer-copy-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime,
+                        quibusdam. Minima natus placeat sequi eos.</p>
+                </div>
+
+                <div class="footer-copy">
+                    <p class="footer-copy-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+                        laborum.</p>
+                </div>
+                <nav class="copy-nav">
+                    <ul class="copy-nav-list">
+                        <li class="copy-nav-item"><a href="" class="copy-nav-link">Point 1 of Copyright Privacy</a></li>
+                        <li class="copy-nav-item"><a href="" class="copy-nav-link">Point 2 of Copyright Privacy</a></li>
+                        <li class="copy-nav-item"><a href="" class="copy-nav-link">Point 3 of Copyright Privacy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/style.js"></script>
+</body>
+
+</html>
