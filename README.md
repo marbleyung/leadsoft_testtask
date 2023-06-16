@@ -6,16 +6,15 @@ This is my realization of LeadSoft evaluation development task Technologies I us
 
 3. react-admin for "Admin website, which gets the information from the Server {end_user_id, web_page_url} and list this information grouped by end_user_id."
 
-_Additional technical requirements. More technical requirements are implemented – higher rate candidate gets.
-
+_
 Communication between second and third component is done via websocket. **-**
 Admin website is build using React Admin library (link is provided below in References). **+**
 Solution is put into the docker container/s. To test the solution, docker container/s should + produce 2/3 urls with different ports: url for Simple website, url for Admin website. **+**
 _
 It's wrong place to substantiate my solutions so I'd prefer to do it personally too.
 _
-1. git clone <repo>
-2. cd <repo>
+1. git clone `repo`
+2. cd `repo`
 3. nano /var/www/leadsoft_testtask/leadsoft_backend/.env
 4. ORIGINS=YOUR VALUES (http://yourhost:5173 http://yourhost http://yourhost:8080)
 5. nano /var/www/leadsoft_testtask/leadsoft_frontend_site/static/js.env
