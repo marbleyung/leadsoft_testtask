@@ -7,11 +7,17 @@ This is my realization of LeadSoft evaluation development task Technologies I us
 3. react-admin for "Admin website, which gets the information from the Server {end_user_id, web_page_url} and list this information grouped by end_user_id."
 
 _
+
 Communication between second and third component is done via websocket. **-**
+
 Admin website is build using React Admin library (link is provided below in References). **+**
+
 Solution is put into the docker container/s. To test the solution, docker container/s should + produce 2/3 urls with different ports: url for Simple website, url for Admin website. **+**
+
 _
+
 It's wrong place to substantiate my solutions so I'd prefer to do it personally too.
+
 _
 1. git clone `repo`
 2. cd `repo`
@@ -28,9 +34,12 @@ _
 13. go to http://127.0.0.1 and do smth
 14. track your activity on the admin site http://localhost:5173 
 _
+
 ERROR: Network supernet declared as external but specifies additional attributes (driver).
 ANSWER: nano docker-compose.yml -> delete `driver` line (in the end)
+
 frontend_1  | Error: Cannot find module 'express'
 ANSWER: nano docker-compose.yml -> find the `frontend` service -> find the `command` line -> change it to 'npm install && cd static/js && node server.js'. Then `docker-compose up`, then REMOVE it on next run
+
 Is something wrong with data sending between the apps? Check your firewall status
 Make sure the other apps don't use this host/port
