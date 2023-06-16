@@ -16,10 +16,22 @@ It's wrong place to substantiate my solutions so I'd prefer to do it personally 
 _
 1. git clone <repo>
 2. cd <repo>
-git checkout remotes/origin/master
-create .env files (copy .env.dev and fill it)
-docker-compose up
-go to http://127.0.0.1 and do smth
-track your activity on the admin site http://localhost:5173 
-_ 
+3. nano /var/www/leadsoft_testtask/leadsoft_backend/.env
+4. ORIGINS=YOUR VALUES (http://yourhost:5173 http://yourhost http://yourhost:8080)
+5. nano /var/www/leadsoft_testtask/leadsoft_frontend_site/static/js.env
+6. HOST=0.0.0.0
+7. PORT=8080
+8. nano /var/www/leadsoft_testtask/leadsoft_frontend_site/static/main.js
+9. find SERVER_URL and change host address to your host (host only, not port/endpoint)
+10. nano leadsoft-admin-site/src/dataProvider.ts
+11. again, change host to yours (not the port!)
+12. docker-compose up
+13. go to http://127.0.0.1 and do smth
+14. track your activity on the admin site http://localhost:5173 
+_
+ERROR: Network supernet declared as external but specifies additional attributes (driver).
+ANSWER: nano docker-compose.yml -> delete `driver` line (in the end)
+frontend_1  | Error: Cannot find module 'express'
+ANSWER: nano docker-compose.yml -> find the `frontend` service -> find the `command` line -> change it to 'npm install && cd static/js && node server.js'. Then `docker-compose up`, then REMOVE it on next run
 Is something wrong with data sending between the apps? Check your firewall status
+Make sure the other apps don't use this host/port
