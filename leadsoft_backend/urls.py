@@ -1,9 +1,25 @@
 from fastapi import APIRouter
 from models import User
 
-
+'''
+USERS_DICT is a var which is being used as a storage of EACH user's visited pages
+USERS_DICT = {
+    'user1': ('url1', 'url2', 'url3'),
+    'user2': ('url2', 'url4'),
+    'user3': ('url4'),
+    }
+'''
 USERS_DICT = {}
+
+'''
+USERS is a var which is being used as a storage of ALL users visited pags
+USERS = [
+    {'user1': USERS_DICT['user1']},
+    {'user2': USERS_DICT['user2']},
+    {'user3': USERS_DICT['user3']},
+'''
 USERS = []
+
 router = APIRouter()
 
 
