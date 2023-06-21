@@ -36,7 +36,7 @@ class WebSocketDataProvider {
                 Object.entries(parsedResponse).forEach((key, value) => {
                     let obj = {
                         id: key[0],
-                        data: key[1],
+                        urls: key[1],
                     }
                     response.data.push(obj);
                 });
