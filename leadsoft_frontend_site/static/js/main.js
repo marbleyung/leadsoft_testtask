@@ -46,11 +46,11 @@ async function sendDataToServer(url, userIdentifier) {
     };
     try {
         const response = await axios.post(SERVER_URL, data);
-//        if (response.status === 200) {
-//            console.log('Data sent successfully');
-//        } else {
-//            console.log('Failed to send data');
-//        }
+        if (response.status === 200) {
+            console.log('Data sent successfully');
+        } else {
+            console.log('Failed to send data');
+        }
     } catch (error) {
         console.log('Error occurred while sending data:', error);
     }

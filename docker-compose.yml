@@ -19,8 +19,8 @@ services:
     command: sh -c "cd static/js && node server.js"
     volumes:
       - ./leadsoft_frontend_site:/frontend
-    ports:
-      - "8080:8080"
+    expose:
+      - 8080
     depends_on:
       - backend
     networks:
@@ -29,6 +29,8 @@ services:
   admin:
     build: ./leadsoft-admin-site
     command: npm run dev
+    volumes:
+      - ./leadsoft-admin-site:/admin
     ports:
       - "5173:5173"
     depends_on:

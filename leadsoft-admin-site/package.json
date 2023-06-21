@@ -8,10 +8,13 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "browserify": "^17.0.0",
+    "dotenv": "^16.3.1",
     "ra-data-json-server": "^4.9.2",
     "react": "^18.2.0",
     "react-admin": "^4.9.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "socketio": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.16.1",

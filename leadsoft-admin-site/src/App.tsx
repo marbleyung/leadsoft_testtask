@@ -1,7 +1,7 @@
-import { Admin, Resource, ListGuesser, Show, SimpleShowLayout, RichTextField } from 'react-admin';
-import { dataProvider } from './dataProvider';
+import { Admin, Resource, Show, SimpleShowLayout, RichTextField, ListGuesser, ShowGuesser } from 'react-admin';
+import dataProvider from './dataProvider';
 
-export const UserShow = () => (
+const UserShow = () => (
     <Show>
         <SimpleShowLayout>
             <RichTextField source="id" />
@@ -12,11 +12,10 @@ export const UserShow = () => (
 
 
 export const App = () => (
+
     <Admin
         dataProvider={dataProvider}
-	>
-    <Resource name="send-data" list={ListGuesser} show={UserShow} />
+    >
+        <Resource name="send-data" list={ListGuesser} show={ShowGuesser} />
     </Admin>
 );
-
-    
