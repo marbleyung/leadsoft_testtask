@@ -21,18 +21,19 @@ It's wrong place to substantiate my solutions so I'd prefer to do it personally 
 _
 1. git clone `repo`
 2. cd `repo`
-3. nano /var/www/leadsoft_testtask/leadsoft_backend/.env
-4. ORIGINS=YOUR VALUES (http://yourhost:5173 http://yourhost http://yourhost:8080)
-5. nano /var/www/leadsoft_testtask/leadsoft_frontend_site/static/js.env
-6. HOST=0.0.0.0
-7. PORT=8080
-8. nano /var/www/leadsoft_testtask/leadsoft_frontend_site/static/js/main.js
-9. find SERVER_URL and change host address to your host (host only, not port/endpoint)
-10. nano leadsoft-admin-site/src/dataProvider.ts
-11. again, change host (this.apiUrl) to yours (not the port!)
-12. docker-compose up
-13. go to http://127.0.0.1 and do smth
-14. track your activity on the admin site http://localhost:5173 
+3. `nano /var/www/leadsoft_testtask/leadsoft_backend/.env`
+4. `ORIGINS=YOUR VALUES` (http://yourhost:5173 http://yourhost http://yourhost:8080)
+5. `nano /var/www/leadsoft_testtask/leadsoft_frontend_site/static/js.env`
+6. `HOST=0.0.0.0`
+7. `PORT=8080`
+8. `nano /var/www/leadsoft_testtask/leadsoft_frontend_site/static/js/main.js`
+9. find `SERVER_URL` and change host address to your host (host only, not port/endpoint)
+10. `nano leadsoft-admin-site/src/dataProvider.ts`
+11. again, change host (`this.apiUrl`) to yours (not the port!)
+12. `docker-compose up`
+13. go to `http://yourhost` and do smth
+14. track your activity on the admin site `http://localhost:5173`
+    
 _
 
 ERROR: Network supernet declared as external but specifies additional attributes (driver).
